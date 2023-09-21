@@ -1,0 +1,21 @@
+{
+	"name": "David Ernesto",
+	"short_name": "Portfolio",
+	"description": "Este es mi espacio digital donde comparto mi pasión por la programación y la tecnología. Soy David Ernesto, un desarrollador dedicado a crear experiencias digitales excepcionales. Explora mi portafolio y conoce los proyectos que han dado vida a mi visión tecnológica.",
+	"icons": [
+		{
+			"src": "/icons/code.svg",
+			"sizes": "192x192",
+			"type": "image/svg+xml"
+		},
+		{
+			"src": "/icons/code.svg",
+			"sizes": "512x512",
+			"type": "image/svg+xml"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#1d1f21",
+	"theme_color": "#2bbc8a",
+	"display": "standalone"
+}

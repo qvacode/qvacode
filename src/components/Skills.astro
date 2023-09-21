@@ -1,0 +1,118 @@
+---
+import Icon from "astro-icon";
+const skills = [
+	{
+		skill: "JavaScript",
+		icon: "mdi:language-javascript",
+	},
+	{
+		skill: "TypeScript",
+		icon: "mdi:language-typescript",
+	},
+	{
+		skill: "Dart",
+		icon: null,
+		path: "/icons/dart.svg",
+	},
+	{
+		skill: "Node.js",
+		icon: "mdi:nodejs",
+	},
+	{
+		skill: "Bun.sh",
+		icon: null,
+		path: "/icons/bun.svg",
+	},
+	{
+		skill: "Docker",
+		icon: "mdi:docker",
+	},
+	{
+		skill: "NestJs",
+		icon: null,
+		path: "/icons/nestjs.svg",
+	},
+	{
+		skill: "AdonisJs",
+		icon: null,
+		path: "/icons/adonisjs.svg",
+	},
+	{
+		skill: "ExpressJs",
+		icon: null,
+		path: "/icons/expressjs.svg",
+	},
+	{
+		skill: "MongoDB",
+		icon: null,
+		path: "/icons/mongodb.svg",
+	},
+	{
+		skill: "PostgreSQL",
+		icon: null,
+		path: "/icons/postgresql.svg",
+	},
+	{
+		skill: "MySQL",
+		icon: null,
+		path: "/icons/mysql.svg",
+	},
+	{
+		skill: "TypeORM",
+		icon: "mdi:code-braces",
+	},
+	{
+		skill: "Mongoose",
+		icon: null,
+		path: "/icons/mongoose.svg",
+	},
+	{
+		skill: "HTML5",
+		icon: "mdi:language-html5",
+	},
+	{
+		skill: "CSS3",
+		icon: "mdi:language-css3",
+	},
+	{
+		skill: "ReactJs",
+		icon: "mdi:react",
+	},
+	{
+		skill: "Angular",
+		icon: "mdi:angular",
+	},
+	{
+		skill: "Astro",
+		icon: null,
+		path: "/icons/astro.svg",
+	},
+	{
+		skill: "TailwindCSS",
+		icon: "mdi:tailwind",
+	},
+];
+---
+
+<div>
+	<div class="mb-5">
+		<div class="w-full text-2xl font-bold" id="skills">Skills</div>
+	</div>
+
+	<ul class="mx-6 mb-10 list-disc columns-2 md:columns-4">
+		{
+			skills.map(({ skill, icon, path }) => {
+				return (
+					<li class="flex items-center gap-1 py-1">
+						{icon ? (
+							<Icon class="w-6" name={icon} aria-hidden="true" focusable="false" />
+						) : (
+							<img src={path} alt="Skill Icon" width="24" />
+						)}
+						<p class="hover:text-link">{skill}</p>
+					</li>
+				);
+			})
+		}
+	</ul>
+</div>
