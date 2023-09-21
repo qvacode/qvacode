@@ -45,7 +45,7 @@ Test-Driven Development (Desarrollo Guiado por Pruebas) es una metodología de d
 Iniciamos nuestro proyecto. Para ello nos aseguramos de tener instalado Bun en nuestra máquina. Si no es así, podemos instalarlo con el siguiente comando:
 
 ```bash
-    curl -fsSL https://bun.sh/install | bash
+curl -fsSL https://bun.sh/install | bash
 ```
 
 Una vez instalado, nos movemos a al directorio donde vamos a tener nuestro proyecto y lo creamos con el siguiente comando:
