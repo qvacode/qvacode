@@ -51,14 +51,14 @@ Iniciamos nuestro proyecto. Para ello nos aseguramos de tener instalado Bun en n
 Una vez instalado, nos movemos a al directorio donde vamos a tener nuestro proyecto y lo creamos con el siguiente comando:
 
 ```bash
-    bun init
+bun init
 ```
 
 Bun nos pedirá establecer el nombre del proyecto y definir el path base del mismo, en mi caso:
 
 ```bash
-    name: bun-product-api
-    path: src/index.ts
+name: bun-product-api
+path: src/index.ts
 ```
 
 Listo, tenemos nuestro proyecto creado.
@@ -68,7 +68,7 @@ Listo, tenemos nuestro proyecto creado.
 Con Bun configurado, creamos un servidor Express:
 
 ```bash
-    bun add express
+bun add express
 ```
 
 Ahora, por que elegimos express y no otro framework. Express es un framework flexible, con el que podemos adoptar la arquitectura de software que queramos, esto si bien puede ser malo, porque no te traza una ruta, en nuestro caso es de gran utilidad, ya que nos permite crear una arquitectura limpia y escalable.
@@ -83,7 +83,7 @@ Siguiendo los principios de Clean Architecture, diseñamos nuestra aplicación c
 bun-product-api/
 │
 ├── __test__/
-│ ├── server.test.ts
+│ │ ├── server.test.ts
 ├── src/
 │ ├── config/
 │ │ ├── env.config.ss
@@ -99,9 +99,8 @@ bun-product-api/
 │ │ │ │ ├── adapters/
 │ │ │ │ ├── application/
 │ │ │ │ ├── domain/
-```
-
 │ │ │ │ ├── infrastructure/
+```
 
 ## Pruebas. Hablemos de TDD
 
@@ -141,9 +140,18 @@ Si vienes de Jest.js, Bun te resultará familiar. Pero bun nos promete un rendim
 
 ## Volvemos al servidor
 
-Ya tenemos nuestro test petando, no hemos hecho nada, solo crear carpetitas 🤭 y un test, pero ya tenemos un test petando. Ahora vamos a crear nuestro servidor, para ello nos vamos a la carpeta src/config y creamos un archivo server.ts, en el cual vamos a crear nuestro servidor express.
+Ya tenemos nuestro test petando, no hemos hecho nada, solo crear carpetitas 🤭 y un test, pero ya tenemos un test petando. Ahora vamos a crear nuestro servidor, para ello nos vamos a la carpeta `src/config` y creamos un archivo `server.ts`, en el cual vamos a crear nuestro servidor express.
 
-El servidor debe permitirnos configurar el el puerto, el enrutador, los middlewares globales, asi como poder levantar o cerrar la conexión de este server.
+El servidor debe permitirnos configurar el puerto, el enrutador, los middlewares globales, así como poder levantar o cerrar la conexión de este server. Para lograr esto, vamos a trabajar con las variables de entorno de forma nativa en Bun. Esto nos brinda la flexibilidad necesaria para ajustar la configuración según nuestras necesidades sin necesidad de usar paquetes de terceros como dotenv.
+
+Nos creamos un archivo **env.config.ts** que nos va a servir para exportar las variables de entorno que necesitemos en nuestro proyecto.
+
+```typescript
+export const Env = {
+	PORT: parseInt(<string>Bun.env.PORT) || 3001,
+	HOST: Bun.env.HOST ?? "localhost",
+};
+```
 
 Puedes ver el código del Servidor en este enlace de [GitHub](https://github.com/qvacode/bun-product-api/blob/main/src/config/server.ts)
 
