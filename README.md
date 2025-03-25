@@ -1,8 +1,8 @@
 ## 👋 ¡Hola! Soy David Ernesto
 
-- 👨‍💻 Soy Ingeniero de Software con +8 años de experiencia en el desarrollo de soluciones tecnológicas desde su concepción hasta su implementación.
-- 🌍 Vivo en Holguín, Cuba.
-- 📧 Puedes contactarme en: dhernandez@elasbit.com.
+- 👨‍💻 Soy Ingeniero de Software con +9 años de experiencia en el desarrollo de soluciones tecnológicas desde su concepción hasta su implementación.
+- 🌍 Vivo en Sao Paulo, Brasil.
+- 📧 Puedes contactarme en: david.hernandez@informagestudios.com
 - ⭐️ Me apasiona ver cómo estas soluciones impactan directamente en el crecimiento y mejora de los negocios, la sociedad y la propia tecnología.
 - 💼 Mi especialización se enfoca en el desarrollo web full stack y el liderazgo de equipos multipropósitos buscando lograr resultados óptimos.
 - 🛠️ Valoro la calidad del software y busco siempre una solución óptima apoyándome en patrones de diseño, principios SOLID y buenas prácticas en general.
@@ -20,7 +20,8 @@
 - Redis
 - RabbitMQ
 - React
-- Angular
+- React Native
+- Expo
 - Tailwind
 - ... etc
 
